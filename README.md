@@ -14,4 +14,4 @@ SpotiApp (Angular)
    * Angular
 
 ## Platform
- * Run on netlify
+ * Run on netlify [SpotiApp](https://spoti-app.netlify.com/)
