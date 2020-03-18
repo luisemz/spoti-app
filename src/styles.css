@@ -10,6 +10,10 @@ hr {
   border-color: white;
 }
 
+.main-container {
+  min-width: 700px;
+}
+
 .mt-60 {
   margin-top: 60px;
 }

@@ -13,6 +13,10 @@ export const environment = {
   },
   countryConfig: {
     apiUrl: "https://restcountries.eu/rest/v2/name/"
+  },
+  auth0Config: {
+    domain: "lemz.auth0.com",
+    clientId: "yakk3QrY9VSbu5SieYfxweFEqSL2WvJ1"
   }
 };
 

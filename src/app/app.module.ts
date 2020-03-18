@@ -1,37 +1,32 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
 
-import { AppRoutingModule } from "./app-routing.module";
+import { CoreModule } from "./core/core.module";
+import { SharedModule } from "./shared/shared.module";
+
 import { AppComponent } from "./app.component";
-import { HomeComponent } from "./components/home/home.component";
-import { SearchComponent } from "./components/search/search.component";
-import { CardComponent } from "./components/card/card.component";
-import { ArtistComponent } from "./components/artist/artist.component";
-import { NabvarComponent } from "./components/shared/nabvar/nabvar.component";
-import { LoadingComponent } from "./components/shared/loading/loading.component";
-import { ShowErrorComponent } from "./components/shared/show-error/show-error.component";
-import { ShowInfoComponent } from './components/shared/show-info/show-info.component';
+import { AppRoutingModule } from "./app-routing.module";
 
-import { NoimagePipe } from "./pipes/noimage.pipe";
-import { SafeDomPipe } from "./pipes/safedom.pipe";
+import { NabvarComponent } from "./layout/nabvar/nabvar.component";
+
+import { AuthModule } from "./modules/auth/auth.module";
+import { AuthLayoutComponent } from "./layout/auth-layout/auth-layout.component";
+import { ContentLayoutComponent } from "./layout/content-layout/content-layout.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SearchComponent,
-    CardComponent,
-    ArtistComponent,
     NabvarComponent,
-    LoadingComponent,
-    ShowErrorComponent,
-    NoimagePipe,
-    SafeDomPipe,
-    ShowInfoComponent
+    AuthLayoutComponent,
+    ContentLayoutComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AuthModule,
+    CoreModule,
+    SharedModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
